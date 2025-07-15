@@ -14,11 +14,7 @@ public class AppTareaControllerTest {
 
     @Test
     public void testCreate(){
-        Tarea resultadoId = tareaController.get(5);
-        assertTrue(resultadoId.getId()>0);
+        long resultadoId = tareaController.create(null);
+        assertTrue(resultadoId > 0);
     }
-    /*
-     En este caso, como nuestro create() devuelve una instancia completa de 'Tarea',
-     tenemos que usar el getter para ver si le está generando el id
-     */
 }
