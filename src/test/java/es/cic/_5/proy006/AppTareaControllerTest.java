@@ -10,11 +10,14 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class AppTareaControllerTest {
 
     @Autowired
-    private AppTareaController tareaController;
-
+    private AppTareaController tareaController;  
+    // Al tener SpringBootTest, podemos pedirle que nos pase un controlador
     @Test
     public void testCreate(){
+       
         long resultadoId = tareaController.create(null);
         assertTrue(resultadoId > 0);
+
     }
+
 }
